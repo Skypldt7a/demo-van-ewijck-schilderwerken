@@ -27,7 +27,9 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Hoe snel kan ik een offerte verwachten?","acceptedAnswer":{"@type":"Answer","text":"Ik stuur u binnen 24 uur na het eerste contact een vrijblijvende offerte. Bij grotere projecten plannen ik een kort bezoek in voor een nauwkeurige inschatting."}},{"@type":"Question","name":"In welke regio's zijn jullie actief?","acceptedAnswer":{"@type":"Answer","text":"Ik werk in Gorinchem en de directe omgeving, waaronder Gorinchem, Dordrecht, Sliedrecht, Hardinxveld-Giessendam."}},{"@type":"Question","name":"Geven jullie garantie op het werk?","acceptedAnswer":{"@type":"Answer","text":"Ja. Op al mijn werkzaamheden geven ik twee jaar werkgarantie. Ontstaat er een probleem binnen die periode, los ik het kosteloos op."}},{"@type":"Question","name":"Moeten ik zelf materiaal regelen?","acceptedAnswer":{"@type":"Answer","text":"Nee, ik regel alles. Van verf tot schildersfolie, transparant opgenomen in de offerte."}},{"@type":"Question","name":"Werken jullie ook voor bedrijven?","acceptedAnswer":{"@type":"Answer","text":"Ja, ik werk voor zowel particulieren als bedrijfspanden, kantoren en VvE's. Neem contact op voor een maatwerkofferte."}}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":""},{"@type":"ListItem","position":2,"name":"Schilderwerk Gorinchem"}]}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,WONK@0,9..144,300,0;0,9..144,500,0;0,9..144,700,0;1,9..144,300,0;1,9..144,500,0&family=Playfair+Display:wght@500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="image" href="hero.jpg?v=1775620023" fetchpriority="high">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;1,9..144,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
 :root{--ink:#141210;--ink2:#3a3632;--ink3:#908b85;--cream:#f7f3ec;--cream2:#ede7da;--cream3:#ddd5c4;--dark:#1c1a17;--dark2:#252220;--accent:#1e3a5f;--accent2:#2d5485;--accent-light:#e6edf5;--white:#ffffff;--serif:'Fraunces',Georgia,serif;--sans:'DM Sans',system-ui,sans-serif;--radius:14px;}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
@@ -232,6 +234,10 @@ footer{background:var(--dark2);padding:30px 72px 18px;}
 .lb-close:hover{background:rgba(20,18,16,0.15);}
 .lb-counter{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);font-size:13px;color:rgba(20,18,16,0.45);letter-spacing:1px;z-index:1001;}
 
+
+/* PERFORMANCE: skip rendering van below-the-fold secties tot ze in beeld komen */
+.diensten-sec,.merken-balk,.portfolio-sec,.werkwijze-sec,.brand-balk,.reviews-sec,.mid-cta,.faq-contact,footer{content-visibility:auto;contain-intrinsic-size:auto 600px;}
+
 @media(max-width:768px){
   /* NAV */
   nav{padding:12px 16px;gap:8px;}
@@ -390,7 +396,7 @@ footer{background:var(--dark2);padding:30px 72px 18px;}
     </div>
   </div>
   <div class="hero-right">
-    <img src="hero.jpg?v=1775620023" alt="Schilderswerk Van Ewijck Schilderwerken Gorinchem" loading="lazy">
+    <img src="hero.jpg?v=1775620023" alt="Schilderswerk Van Ewijck Schilderwerken Gorinchem" loading="eager" fetchpriority="high" decoding="async" width="800" height="600">
     <div class="hero-stats-card">
       <div class="hero-stats-row">
         <div class="hero-stat"><div class="hero-stat-num">40+</div><div class="hero-stat-lbl">Jaar ervaring</div></div>
@@ -446,23 +452,23 @@ footer{background:var(--dark2);padding:30px 72px 18px;}
   </div>
   <div class="portfolio-grid">
     <div class="p-card lb-trigger" data-index="0" role="button" tabindex="0" aria-label="Foto 1 openen">
-      <img src="werk-premium-07.png" loading="lazy" alt="Schildersproject Van Ewijck Schilderwerken Dordrecht 1"/>
+      <img src="werk-premium-07.png" loading="lazy" decoding="async" width="800" height="600" alt="Schildersproject Van Ewijck Schilderwerken Dordrecht 1"/>
       <div class="p-card-zoom"><svg width="20" height="20" fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div>
     </div>
     <div class="p-card lb-trigger" data-index="1" role="button" tabindex="0" aria-label="Foto 2 openen">
-      <img src="werk-premium-08.png" loading="lazy" alt="Schildersproject Van Ewijck Schilderwerken Dordrecht 2"/>
+      <img src="werk-premium-08.png" loading="lazy" decoding="async" width="800" height="600" alt="Schildersproject Van Ewijck Schilderwerken Dordrecht 2"/>
       <div class="p-card-zoom"><svg width="20" height="20" fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div>
     </div>
     <div class="p-card lb-trigger" data-index="2" role="button" tabindex="0" aria-label="Foto 3 openen">
-      <img src="werk-premium-01.png" loading="lazy" alt="Schildersproject Van Ewijck Schilderwerken Dordrecht 3"/>
+      <img src="werk-premium-01.png" loading="lazy" decoding="async" width="800" height="600" alt="Schildersproject Van Ewijck Schilderwerken Dordrecht 3"/>
       <div class="p-card-zoom"><svg width="20" height="20" fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div>
     </div>
     <div class="p-card lb-trigger" data-index="3" role="button" tabindex="0" aria-label="Foto 4 openen">
-      <img src="werk-premium-02.png" loading="lazy" alt="Schildersproject Van Ewijck Schilderwerken Dordrecht 4"/>
+      <img src="werk-premium-02.png" loading="lazy" decoding="async" width="800" height="600" alt="Schildersproject Van Ewijck Schilderwerken Dordrecht 4"/>
       <div class="p-card-zoom"><svg width="20" height="20" fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div>
     </div>
     <div class="p-card lb-trigger" data-index="4" role="button" tabindex="0" aria-label="Foto 5 openen">
-      <img src="werk-premium-06.png" loading="lazy" alt="Schildersproject Van Ewijck Schilderwerken Dordrecht 5"/>
+      <img src="werk-premium-06.png" loading="lazy" decoding="async" width="800" height="600" alt="Schildersproject Van Ewijck Schilderwerken Dordrecht 5"/>
       <div class="p-card-zoom"><svg width="20" height="20" fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div>
     </div>
   </div>
@@ -649,7 +655,6 @@ document.getElementById('mob-cta').addEventListener('click', function(e){
   const orig = Array.from(track.querySelectorAll('.review-card'));
   const total = orig.length;
   let cur = 0, timer = null, resumeTimer = null;
-  orig.forEach(c => track.appendChild(c.cloneNode(true)));
   orig.forEach(c => track.appendChild(c.cloneNode(true)));
   function cardW(){ return track.querySelectorAll('.review-card')[0].offsetWidth + 20; }
   function goTo(i, anim){ track.style.transition = anim ? 'transform 0.55s cubic-bezier(0.25,0.1,0.25,1)' : 'none'; track.style.transform = 'translateX(-' + (i * cardW()) + 'px)'; cur = i; }
